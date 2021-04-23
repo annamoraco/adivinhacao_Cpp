@@ -42,6 +42,7 @@ int main(){
 
         if (acertou){
             cout << "Parabens! Voce acertou o numero secreto!" << endl << endl;
+            break;
         } else if (maior){
             cout << "O numero secreto eh menor." << endl << endl;
         } else {
@@ -57,6 +58,6 @@ int main(){
         cout << "Parabens, voce ganhou!" << endl ;
         cout << "Pontuacao obtida: " << pontos << endl << endl;
     } else {
-        cout << "Voce perdeu!" << endl;
+        cout << "Voce perdeu. Tente novamente." << endl;
     }
 }
