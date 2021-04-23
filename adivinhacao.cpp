@@ -18,10 +18,15 @@ int main(){
 
         tentativas++;
 
-        cout << "Tentativa " << tentativas << endl << endl;
+        bool chutevalido = false;
 
-        cout << "Digite um numero: " ;
-        cin  >> chute ;
+        while(!chutevalido){
+            cout << "Tentativa " << tentativas << endl << endl;
+
+            cout << "Digite um numero positivo: " ;
+            cin  >> chute ;
+            if (chute > 0 ) chutevalido = true;
+        };
 
         acertou = chute == NUMEROSECRETO;
         bool maior = chute > NUMEROSECRETO;
@@ -37,7 +42,7 @@ int main(){
     }
     cout << "FIM DE JOGO" << endl << endl;
     
-    cout.precision(2);
+    cout.precision(1);
     cout << fixed;
     cout << "Pontuacao obtida: " << pontos << endl << endl;
 }
