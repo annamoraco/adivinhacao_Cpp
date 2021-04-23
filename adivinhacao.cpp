@@ -8,7 +8,9 @@ int main(){
     bool acertou = false;
     int tentativas = 0;
 
-    cout << "***************************************" << endl;
+    double pontos = 1000.0;
+
+    cout << endl << "***************************************" << endl;
     cout << "** Bem vindo ao jogo da adivinhacao! **" << endl;
     cout << "***************************************" << endl << endl; 
 
@@ -31,6 +33,11 @@ int main(){
         } else {
             cout << "O numero secreto eh maior." << endl << endl;
         }
+        pontos = pontos - abs(NUMEROSECRETO-chute)/2.0;
     }
     cout << "FIM DE JOGO" << endl << endl;
+    
+    cout.precision(2);
+    cout << fixed;
+    cout << "Pontuacao obtida: " << pontos << endl << endl;
 }
