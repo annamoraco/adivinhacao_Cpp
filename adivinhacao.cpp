@@ -1,10 +1,13 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int main(){
 
     int chute;
-    const int NUMEROSECRETO = 42;
+    srand(time(NULL));
+    const int NUMEROSECRETO = rand()%100;
     bool acertou = false;
 
     double pontos = 1000.0;
