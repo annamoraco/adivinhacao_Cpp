@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
 using namespace std;
 
 void cabecalho(){
@@ -18,8 +19,8 @@ int seleciona_dificuldade(){
 
     int numerotentativas;
 
-    if (dificuldade == 'F') numerotentativas = 30;
-    else if (dificuldade == 'M' ) numerotentativas = 20;
+    if (toupper(dificuldade) == 'F') numerotentativas = 30;
+    else if (toupper(dificuldade) == 'M' ) numerotentativas = 20;
     else numerotentativas = 10;
     return numerotentativas;
 }
